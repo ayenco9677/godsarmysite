@@ -1,0 +1,258 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        list-style: none;
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    /*
+===================
+Fonts
+===================
+*/
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+    /*
+====================
+variables
+====================
+*/
+    
+     :root {
+        /*dark shades of primary color*/
+        --clr-primary-1: hsl(205, 86%, 17%);
+        --clr-primary-2: hsl(205, 77%, 27%);
+        --clr-primary-3: hsl(205, 72%, 37%);
+        --clr-primary-4: hsl(205, 63%, 48%);
+        /*primary/main color*/
+        --clr-primary-5: #49a6e9;
+        /*lighter shades of primary color*/
+        --clr-primary-6: hsl(205, 89%, 70%);
+        --clr-primary-7: hsl(205, 90%, 76%);
+        --clr-primary-8: hsl(205, 86%, 81%);
+        --clr-primary-9: hsl(205, 90%, 88%);
+        --clr-primary-10: hsl(205, 100%, 96%);
+        /*darkest grey use for heading*/
+        --clr-grey-1: hsl(209, 61%, 16%);
+        --clr-grey-2: hsl(211, 39%, 23%);
+        --clr-grey-3: hsl(209, 61%, 16%);
+        --clr-grey-4: hsl(211, 39%, 23%);
+        /*greys used for paragraph*/
+        --clr-grey-5: hsl(210, 22%, 49%);
+        --clr-grey-6: hsl(209, 23%, 60%);
+        --clr-grey-7: hsl(211, 27%, 70%);
+        --clr-grey-8: hsl(210, 31%, 80%);
+        --clr-grey-9: hsl(212, 33%, 89%);
+        --clr-grey-10: hsl(210, 36%, 96%);
+        --clr-white: #fff;
+        --clr-red-dark: hsl(360, 67%, 44%);
+        --clr-red-dark: hsl(360, 71%, 66%);
+        --clr-gree-dark: hsl(120, 69%, 60%);
+        --clr-green-light: hsl(125, 71%, 66%);
+        --clr-secondary: hsla(185, 63%, 54%);
+        --clr-black: #222;
+        /*font family*/
+        --ff-primary: "Rooboto", sans-serif;
+        --ff-secondary: "Open Sans", sans-serif;
+        --transition: all 0.3s linear;
+        --spacing: 0.25rem;
+        --radius: 0.5rem;
+        --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        --max-width: 1170px;
+        --fixed-width: 620px;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    *,
+     ::after,
+     ::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        background: linear-gradient(rgba(63, 208, 213, 0.5), rgba(0, 0, 0, 0.7)), url(/images/hero_b1_1.jpg) center/cover no-repeat;
+    }
+    /*
+    ================
+    scroll
+    ================
+    */
+    /*nav*/
+    
+    @media screen and(min-width: 800px) {}
+    
+    nav {
+        background: var(--clr-white);
+        padding: 1rem 1.5rem;
+    }
+    
+    .nav-center {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 1170px;
+        width: 90vw;
+        justify-content: space-between;
+    }
+    
+    .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+    
+    .fixed-nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 150px;
+        background: var(--clr-white);
+        box-shadow: var(--light-shadow);
+    }
+    
+    .fixed-nav .links a {
+        color: var(--clr-grey-1);
+    }
+    
+    .fixed-nav .links a:hover {
+        color: var(--clr-secondary);
+    }
+    
+    .nav-toggle {
+        font-size: 1.5rem;
+        color: var(--clr-grey-1);
+        background: transparent;
+        cursor: pointer;
+        border-color: transparent;
+        position: absolute;
+        right: 30px;
+        height: 50px;
+        padding-right: 20px;
+        transition: var(--transition);
+    }
+    
+    .logo {
+        height: 100%;
+    }
+    
+    .nav-header>img {
+        height: 50%;
+        width: 100px;
+        object-fit: contain;
+    }
+    /*section and title*/
+    
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: var(--ff-secondary);
+        font-weight: 700;
+    }
+    
+    h2 span {
+        color: var(--clr-secondary);
+    }
+    
+    .about,
+    .sermon,
+    .services,
+    .contact {
+        height: 80vh;
+    }
+    
+    #services {
+        background: var(--clr-white);
+    }
+    
+    footer {
+        background: var(--clr-grey-1);
+        height: 40vh;
+        padding: 5rem 1rem;
+    }
+    
+    footer p {
+        text-align: center;
+        color: var(--clr-white);
+        text-transform: capitalize;
+        margin-bottom: 0;
+        letter-spacing: var(--spacing);
+    }
+    
+    .links-container {
+        height: auto! important;
+        overflow: hidden;
+        transition: var(--transition);
+    }
+    
+    .show-links {
+        height: 200px;
+    }
+    
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+    
+    .links-container>.links a {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        text-decoration: none;
+        cursor: pointer;
+        margin-right: 20px;
+        font-weight: bold;
+        display: block;
+        background: var(--clr-white);
+        color: var(--clr-grey-2);
+        letter-spacing: var(--spacing);
+        transition: var(--transition);
+        padding: 0.75rem;
+    }
+    
+    .top-link {
+        font-size: 1.5rem;
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+        background: var(--clr-secondary);
+        width: 2rem;
+        height: 2rem;
+        display: grid;
+        place-items: center;
+        border-radius: var(--radius);
+        color: var(--clr-white);
+        animation: bounce 2s ease-in-out infinite;
+        visibility: hidden;
+        z-index: -100;
+    }
+    
+    .show-link {
+        visibility: visible;
+        z-index: 100;
+    }
+    
+    @keyframes bounce {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
